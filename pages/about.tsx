@@ -11,7 +11,7 @@ const About: NextPage = () => {
       >
         <Prose>
           <p>
-            Hello, I'm Gaurav Shukla <br/>
+            Hello, I am Gaurav Shukla <br/>
             Young Full-Stack Developer & Designer currently @ <a href="https://accenture.com">Accenture</a>
           </p>
           <p>
