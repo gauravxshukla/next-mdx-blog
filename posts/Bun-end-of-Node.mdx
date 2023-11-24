@@ -1,0 +1,61 @@
+---
+title: "Bun? End of NodeJS?"
+description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, ex!"
+date: "2023-11-16"
+tags: ['backend']
+---
+
+Recently, [@jarredsumner](https://twitter.com/jarredsumner) launched [Bun](http://bun.sh) .
+
+Let’s understand what Bun is and can it actually replace Node?
+
+## What is Bun?
+
+Bun is a new JavaScript runtime built from scratch to serve the modern JavaScript ecosystem. It provides a minimal set of highly-optimized APIs for performing common tasks, like starting an HTTP server and writing files.
+
+Bun is a complete toolkit for building JavaScript apps, including a package manager, test runner, and bundler. It is designed as a drop-in replacement for Node.js. It natively implements hundreds of Node.js and Web APIs, including `fs`, `path`, `Buffer` and more.
+
+The goal of Bun is to run most of the world's server-side JavaScript and provide tools to improve performance, reduce complexity, and multiply developer productivity.
+
+### **Why is Bun so fast?**
+
+Bun is fast because it uses uses [JavaScriptCore](https://developer.apple.com/documentation/javascriptcore) (JSC), which is an open source JavaScript engine developed by Apple for Safari, While Node.js uses Google's [V8 engine](https://v8.dev/) that power's Chrome browser. The former has been optimized for faster startup time.
+
+![image](/images/But-why-is-that-relevant.png)
+
+### **No need of NPM, YARN?**
+
+Now, we don’t need tools like `npm`, `pnpm`, or `yarn` because Bun is 17 times faster. Take a look at the data below:
+
+### **Bun Supports Hot Reloading**
+
+Bun supports hot reloading out of the box so you don’t need tools like Nodemon. It will automatically refresh the server when running JavaScript or TypeScript Code.
+
+You can replace `npm run` with `bun run` to save over 150ms milliseconds every time you run a command.
+
+Here is the full chart:
+
+![image](/images/npm-yarn.png)
+
+From the chart above, using `npm` takes about 176ms to run, `yarn` takes about 131ms. In the case of `pnpm`, it takes 259ms. However, it takes about 7ms in the case of `Bun`. That's fast, isn't it?
+
+### **No need of Bundler?**
+
+Bun is also a JavaScript bundler with best-in-class performance and an ESBuild-compatible plugin API, so we don’t need things like:
+
+- ESBuild
+- Webpack
+- Parcel, .parcelrc
+- Rollup, rollup.config.js
+
+### **No need of Transpiler?**
+
+Furthermore, it proudly boasts compatibility with TypeScript and TSX files, and notably, it delivers superior speed compared to Node.js. A pivotal feature of Bun is its adeptness in supporting both Common JS and ES modules.
+
+### **Final thoughts**
+
+While Bun is getting a lot of hype recently we cannot say it will replace Node, Node as a runtime has to undergo many improvements but it is the ecosystem, community support which is why Node is the top most choice for Javascript runtime among Developers.
+
+Also, although Bun is Open Source it’s parent company is supported by heavy VC investment which means we could experience vendor lock-in like we already experience in NextJS through Vercel.
+
+Overall, let’s see what the future unfolds, if you are a Developer, make sure to try Bun, you will love the experience of using it if you are a Developer coming from Node ecosystem.
